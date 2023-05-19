@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Подбор диеты для вашего кота.">
+    <title>"Cat Energy"</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:regular,500" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+  </head>
+
+<body class="page-body">
+
+  <header class="page-header">
+    <nav class="page-header__nav page-header__main-nav page-header__main-nav--closed page-header__main-nav--nojs">
+      <div class="page-header__bar">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1400px)" srcset="img/desktop/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+            <img class="page-header__logo-image" width="33" height="38" src="img/mobile/main-page/header-logo-pic.svg" alt="Логотип магазина Кэт Энерджи">
+          </picture>
+
+          <img class="page-header__logo-text" width="101" height="18" src="img/mobile/main-page/header-logo-text.svg" alt="Текстовый логотип магазина Кэт Энерджи">
+        </a>
+
+        <button class="page-header__toggle" type="button">
+          <span class="visually__hidden">Открыть меню</span>
+        </button>
+      </div>
+
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--current" href="form.html">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="page-main page-main__form">
+    <header class="page-main__heading">
+      <h1 class="page-main__title title">Подбор программы</h1>
+    <p class="page-main__text">Заполните анкету, и мы подберем
+      программу питания для вашего кота</p>
+    </header>
+
+    <section class="page-main__section programm">
+      <h2 class="visually__hidden">Форма анкеты</h2>
+
+      <form class="programm__form" action="https://echo.htmlacademy.ru/courses" method="get">
+        <fieldset class="form__field-group field-group field-group--border">
+          <legend class="visually__hidden">Данные о вашем котике</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="field-group__label">ИМЯ:*
+                <input class="field-group__input" type="text" name="name" id="name" placeholder="барсик" required="">
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">Вес (кг):*
+                <input class="field-group__input" type="number" name="weight" id="weight" placeholder="7" required="">
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">Возраст (лет):
+                <input class="field-group__input" type="number" name="age" id="age" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__field-group field-group field-group--border">
+          <legend class="visually__hidden">Выбор программы</legend>
+          <ul class="field-group__list field-group__list--border">
+            <li class="field-group__item">
+              <label class="field-group__control control" for="slim">
+                <input class="visually__hidden control__input" type="radio" name="programm" id="slim" value="slim" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">похудение</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__control control" for="pro">
+                <input class="visually__hidden control__input" type="radio" name="programm" id="pro" value="pro">
+                <span class="control__mark"></span>
+                <span class="control__label">Набор массы</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__control control" for="advice">
+                <input class="visually__hidden control__input" type="radio" name="programm" id="advice" value="need-advice">
+                <span class="control__mark"></span>
+                <span class="control__label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__field-group field-group field-group--contacts">
+          <legend class="field-group__title field-group__title--contacts">
+            <span>Контактные данные (владельца кота)</span>
+          </legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="field-group__label">E-mail:*
+                <input class="field-group__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required="">
+                <svg class="field-group__icon" width="20" height="15" fill="none" area-hidden="true">
+                  <use xlink:href="img/sprite.svg#field-group__email"></use>
+                  </svg>
+                  </svg>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__label">Телефон:*
+                <input class="field-group__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" pattern="8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
+                <svg class="field-group__icon" width="20" height="21" fill="currentColor" area-hidden="true">
+                  <use xlink:href="img/sprite.svg#field-group__phone"></use>
+                  </svg>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="form__field-group field-group field-group--comment">
+          <label class="field-group__title field-group__title--comment" for="comment">
+            <span>Комментарий</span>
+          </label>
+          <div class="field-group__textarea">
+          <textarea class="field-group__comment" name="comment" id="comment"  placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </div>
+        </div>
+
+        <fieldset class="form__field-group field-group field-group--additional">
+          <legend class="field-group__title field-group__title field-group__title--additional">
+            <span>Дополнительно</span>
+          </legend>
+          <ul class="field-group__list field-group__list--grid">
+            <li class="field-group__item">
+              <label class="field-group__control control">
+                <input class="visually__hidden control__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__control control">
+                <input class="visually__hidden control__input" type="checkbox" name="drinking-water" id="water">
+                <span class="control__mark"></span>
+                <span class="control__label">питьевая вода</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__control control">
+                <input class="visually__hidden control__input" type="checkbox" name="milk" id="milk">
+                <span class="control__mark"></span>
+                <span class="control__label">молоко</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field-group__control control">
+                <input class="visually__hidden control__input" type="checkbox" name="vitamins" id="vitamins">
+                <span class="control__mark"></span>
+                <span class="control__label">витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="programm__footer">
+          <button class="programm__button button" type="submit">отправить заявку</button>
+          <p class="form__text">* — Обязательные поля</p>
+        </div>
+      </form>
+    </section>
+
+    <footer class="page-main__footer contacts contacts--color">
+      <h2 class="visually__hidden">Контакты</h2>
+
+      <div class="contacts__wrapper">
+        <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
+      <address class="contacts__address">ул. Большая
+        Конюшенная, д. 19/8
+        Санкт-Петербург</address>
+      </div>
+
+      <div class="contacts__map map" style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+        <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.323036%2C59.938631&utm_medium=mapframe&utm_source=maps&z=16.52" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс Карты</a>
+        <iframe class="map__location" src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=16.52" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+        </iframe>
+      </div>
+    </footer>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container container">
+      <a class="page-footer__logo" href="#">
+        <img class="logo__image" width="128" height="24" src="img/mobile/main-page/footer-logo-text.svg" alt="Текстовый логотип Кэт Энерджи">
+      </a>
+      <ul class="page-footer__media media__list">
+        <li class="media__item">
+          <a class="media__link media__vkontakte" href="#">
+            <span class="visually__hidden">ВКонтакте</span>
+            <svg width="23" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#media__vkontakte"></use>
+              </svg>
+          </a>
+        </li>
+        <li class="media__item">
+          <a class="media__link media__instagram" href="#">
+            <span class="visually__hidden">Инстаграм</span>
+            <svg width="16" height="16" fill="none">
+              <use xlink:href="img/sprite.svg#media__instagram"></use>
+              </svg>
+          </a>
+        </li>
+        <li class="media__item">
+          <a class="media__link media__facebook" href="#">
+            <span class="visually__hidden">Фейсбук</span>
+            <svg width="13" height="20" fill="none">
+              <use xlink:href="img/sprite.svg#media__facebook"></use>
+              </svg>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually__hidden">Разработано в</span>
+      HTML Academy
+      <svg class="developer__logo" width="27" height="34">
+        <use xlink:href="img/sprite.svg#developer-logo"></use>
+      </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

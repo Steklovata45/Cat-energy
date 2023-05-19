@@ -1,0 +1,38 @@
+@mixin small-text {
+  font: {
+    family: "Arial", sans-serif;
+    style: normal;
+    size: 14px;
+    weight: 400;
+  }
+  line-height: 18px;
+  color: #444444;
+}
+
+@mixin block-heading {
+  margin: 0;
+  font: {
+    family: $font-heading;
+    style: normal;
+    weight: 400;
+    size: 36px;
+  }
+  line-height: 36px;
+  color: #000000;
+}
+
+@mixin button {
+  padding: 10px;
+  font: {
+    family: $font-heading;
+    weight: 400;
+    size: 14px;
+  }
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $basic-green;
+  color: #ffffff;
+  cursor: pointer;
+}

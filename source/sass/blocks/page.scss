@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-body {
+  min-width: 320px;
+  margin: 0;
+  @include small-text;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+  }
+}
+
+.container {
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding: 0;
+  }
+}

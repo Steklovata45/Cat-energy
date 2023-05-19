@@ -1,0 +1,344 @@
+.example {
+  padding-top: 25px;
+  padding-bottom: 44px;
+
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 40px;
+
+    background-image: linear-gradient(to top, #eaeaea 462px, #ffffff 462px);
+    border-top: 2px solid $basic-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 35px;
+    background-image: linear-gradient(to top, $basic-grey 462px, #ffffff 462px);
+    border: none;
+  }
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 193px;
+  }
+}
+
+.example__info {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 366px 1fr;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 56px;
+    margin-bottom: 146px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 53px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 0;
+  margin-bottom: 33px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 164px);
+    gap: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 8px 0;
+
+  border: 1px solid $special-grey;
+  border-radius: 4px;
+}
+
+.example__subtitle {
+  width: 87px;
+  margin: 0;
+  margin-bottom: -16px;
+  padding: 0 7px;
+
+  font-size: 12px;
+  line-height: 12px;
+
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: -5px;
+
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -7px;
+    background-color: $basic-grey;
+  }
+}
+
+.example__definition {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $font-heading;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__spending {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $font-heading;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    padding-top: 6px;
+    justify-self: end;
+    align-self: center;
+    text-align: right;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding-top: 12px;
+    text-align-last: left;
+  }
+
+  & span:first-child {
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 59px;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.example__images {
+  margin-bottom: 15px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    max-width: 708px;
+    padding: 0 58px;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+    padding: 0;
+  }
+}
+
+.example__image {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+.example__image img {
+  height: 232px;
+
+  @media (min-width: $tablet-width) {
+    width: 592px;
+    height: 511px;
+    max-width: none;
+  }
+}
+
+.example__image--current {
+  display: block;
+}
+
+.example__image--after {
+  justify-content: end;
+}
+
+.switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.switcher__button {
+  padding: 1px 5px;
+
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  &:focus {
+    border-bottom: 1px solid #dcdcdc;
+    outline: none;
+  }
+
+  &:active {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 2px 0;
+    font-size: 20px;
+    line-height: 30px;
+
+    border-bottom: 1px dotted #dcdcdc;
+  }
+}
+
+.switcher__toggler {
+  display: flex;
+  align-items: center;
+  padding: 2px 7px;
+  width: 86px;
+  height: 14px;
+  margin: 0 13px;
+
+  background-color: #ffffff;
+  border: 1px solid $special-grey;
+  border-radius: 6px;
+
+  &::before {
+    content: "";
+    width: 36px;
+    height: 6px;
+
+    background-color: $basic-green;
+    border-radius: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.switcher--berfore .switcher__toggler {
+  justify-content: start;
+}
+
+.switcher--after .switcher__toggler {
+  justify-content: end;
+}
+
+.switcher__range {
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 426px;
+    height: 6px;
+    margin: 0 26px;
+
+    appearance: none;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+  }
+}
+
+.switcher__range::-moz-range-thumb {
+  @media (min-width: $tablet-width) {
+    width: 10px;
+    height: 10px;
+
+    border: 12px solid #ffffff;
+    border-radius: 50%;
+    background-color: $basic-green;
+    cursor: pointer;
+  }
+}
+
+.switcher__range:focus::-moz-range-thumb {
+  outline: 1px solid $basic-green;
+}

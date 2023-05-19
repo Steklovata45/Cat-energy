@@ -1,0 +1,209 @@
+.diet__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-bottom: 71px;
+  }
+}
+
+.diet__item {
+  margin-bottom: 20px;
+  padding: 30px 20px 18px;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding: 77px 52px 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+.diet__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 70px;
+
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #000000;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: -6px;
+    left: 2px;
+
+    background-color: $basic-green;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      top: 15px;
+      left: auto;
+      right: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    padding-left: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
+}
+
+.diet__title-slim::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 5px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../../img/mobile/main-page/slim.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    top: 9px;
+    right: 36px;
+    left: auto;
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -37px;
+    left: 14px;
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.diet__title-pro::after {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: -10px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../../img/mobile/main-page/pro.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    top: 63px;
+    right: -24px;
+    left: auto;
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -4px;
+    left: -17px;
+    width: 134px;
+    height: 56px;
+  }
+}
+
+.diet__text {
+  margin: 0;
+  margin-bottom: 18px;
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
+
+  @media (min-width: $tablet-only) {
+    min-width: 570px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 467px;
+    margin-bottom: 26px;
+  }
+}
+
+.diet__link {
+  position: relative;
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $basic-green;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 12px;
+    top: 8px;
+    left: 110px;
+    background-image: url("../../img/mobile/main-page/diet-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 130px;
+    }
+  }
+
+  &:hover::after {
+    width: 32px;
+    background-size: 32px 12px;
+  }
+
+  &:focus::after {
+    width: 32px;
+    background-size: 32px 12px;
+  }
+
+
+}

@@ -1,0 +1,16 @@
+.button {
+  @include button;
+
+  &:hover {
+    background-color: $hover-green;
+  }
+
+  &:focus {
+    outline: 2px solid #d24899;
+  }
+
+  &:active {
+    background-color: $hover-green;
+    color: rgba(255, 255, 255, 0.3)
+  }
+}
